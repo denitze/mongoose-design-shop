@@ -1,2 +1,2 @@
 # mongoose-design-shop
-# Hallo Test!
+Das ist ist ein toller Online Shop, der mit Mongoose, Express, Ejs aufgebaut wurde. 
