@@ -1,6 +1,5 @@
 <%- include('./partials/header')%>
-<h1>Hallo Welt!</h1>
-<div class="galler">
+<div class="gallery">
     <% galleryData.forEach(picture => { %>
         
         <figure>
@@ -8,13 +7,15 @@
                 <img src=<%=picture.url%> alt="">
                 </a>
             <figcaption>
+                <div>
                 <p>
                     <%=picture.articlename%>
                 </p>
                 <p>
                     <%=picture.price%>
                 </p>
-                <p>
+                </div>
+                <p class="brand">
                     <%=picture.brandname%>
                 </p>
             </figcaption>

@@ -1,3 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color: #323A45;
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    margin: 2vh 3rem;
+}
+
+nav ul {
+    display:flex;
+}
+
+li {
+    margin-left:3rem;
+}
+
+nav p, footer p{
+    font-size: 1.4rem;
+}
+
+a {
+    color: #323A45;
+}
+
+nav li a:hover {
+    color: #848484;
+}
+
 .hide {
     display: none;
+}
+
+.gallery,.random-six {
+    margin: 5vh 3rem 10vh;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+figure img {
+    width:100%;
+}
+
+.gallery figure:nth-of-type(7n +1){
+    grid-column-start: 1;
+    grid-column-end:4;
+}
+
+figure img:hover{
+    filter: grayscale(60%);
+    opacity: 0.5;
+    transition:.5s ;
+}
+
+.brand {
+    color: #848484;
+}
+
+figure div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* NEW PRODUCT */
+
+section {
+    padding: 5vh 3rem 10vh;
+}
+
+.new-product{
+    border-bottom: 1px solid #323A45;
+    position: relative;
+}
+
+#eyes{
+    position:absolute;
+    bottom:-2rem;
+    left:48%;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom:3vh;
+    padding: 1rem;
+    text-align: center;
+    border: none;
+    background-color: #c4c1c1;
+    color: #323A45;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+input[type="submit"]{
+    background: #323A45;
+    color:#fff;
+}
+
+input[type="submit"]:hover{
+    background: #848484;
+    color:#323A45;
+}
+
+h1,h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 5vh 0 1vh;
+}
+
+.random-six img{
+    height:30rem;
+    object-fit: cover;
+}
+.line {
+    margin: 0 auto;
+    height:5px;
+    width:4rem;
+    background-color: #323A45;
+    margin-bottom: 5vh;
+}
+
+.single-product h2 {
+    margin-bottom:4vh;
+}
+
+.single-product h2:first-of-type{
+    text-align: left;
+}
+
+
+
+.single-product .description {
+    line-height:1.5rem;
+}
+
+.single-product .edit-delete {
+    text-align:right;
+}
+
+.single-product button {
+    background:none;
+    border:none;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    margin-right:1rem;
+}
+
+.single-product button, .single-product a{
+    color: #848484;
+    margin-bottom:2vh;
+}
+
+.single-product button:hover, .single-product a:hover{
+    color: #323A45;
+}
+
+.single-product figure{
+    width:70%;
+    margin:0 auto;
+}
+
+
+
+footer{
+    text-align: center;
+    margin:2vh 3rem;
 }

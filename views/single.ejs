@@ -1,34 +1,40 @@
 <%- include('./partials/header')%>
+<section class="single-product">
 <h1>Single Product</h1>
 <%# JSON.stringify(galleryData) %>
+<div class="edit-delete">
 <button onclick="toggleHide()">Edit User</button>
 <a href="/single/<%=picture.id%>/delete">Delete</a>
+</div>
     <figure>
         <img src=<%=picture.url%> alt="">
         <figcaption>
+            <div>
             <p>
                 <%=picture.articlename%>
             </p>
             <p>
                 <%=picture.price%>
             </p>
-            <p>
+        </div>
+            <p class="brand">
                 <%=picture.brandname%>
             </p>
         </figcaption>
     </figure>
-    <p><p>
+    <h2>Product Description</h2>
+    <p class="description">
         <%=picture.description%>
-    </p></p>
+    </p>
 
     <form action="/single/<%=picture.id%>/edit" method="POST" id="myForm" class="hide">
-        <h2>Edit!</h2>
+        <h2>Edit Product</h2>
         <input type="text" name="articlename" id="" placeholder="Product-Name" value="<%=picture.articlename%>">
         <input type="text" name="url" id="" placeholder="Url-Picture" value="<%=picture.url%>">
         <input type="text" name="brandname" id="" placeholder="Company" value="<%=picture.brandname%>">
         <input type="text" name="price" id="" placeholder="Price" value="<%=picture.price%>">
-        <textarea name="description" id="" placeholder="Write your article here..."><%=picture.description%></textarea>
-        <input type="submit" value="Add Product">
+        <textarea name="description" id="" rows=6 placeholder="Write your article here..."><%=picture.description%></textarea>
+        <input type="submit" value="Edit Product">
         </form>
-
+    </section>
 <%- include('./partials/footer')%>
