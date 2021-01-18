@@ -1,2 +1,5 @@
 # mongoose-design-shop
-Das ist ist ein toller Online Shop, der mit Mongoose, Express, Ejs aufgebaut wurde. 
+
+Designshop created with Mongoose, Express and Ejs.
+
+https://designshop-mongoose.herokuapp.com/
