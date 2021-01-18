@@ -46,12 +46,13 @@ app.get('/', (req, res) => {
 
 
 app.get('/add', (req, res) => {
-    GalleryItem.find().limit(6)
+    GalleryItem.find()
     .then(result => {
-        // res.send(result)
-        res.render('add', {galleryData: result})
-
+        const productData = result
+        const randomData = productData.sort(() => .5 - Math.random()).slice(0,6)
+        res.render('add', {productData, randomData})
     })
+    .catch(err=> console.log(err))
 })
 
 app.post('/add-product', (req, res) => {
